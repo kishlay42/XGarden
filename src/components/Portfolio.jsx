@@ -37,7 +37,19 @@ const Portfolio = () => {
         <div className="nirvana"></div>
         <div className="Inservice"></div>
         <div className="e">
-          <div className="skills"></div>
+          <div className="skills">
+            <p>Skills</p>
+            <ul className="skillsList">
+              <li>Figma</li>
+              <li>Gen AI</li>
+              <li>UI Design</li>
+              <li>UX Design</li>
+              <li>MongoDB</li>
+              <li>Express</li>
+              <li>React</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
           <div className="flip-clock">
             <FlipClock />
           </div>
@@ -48,7 +60,23 @@ const Portfolio = () => {
             <ChromeDinoGame sound={false} />
           </div>
           <div className="genposium"></div>
-          <div className="Email"></div>
+          <div className="Email">
+            <h2 className="contact-title">Contact me</h2>
+            <p className="contact-description">
+            Got something to share? <br/> Pop in your email!
+            </p>
+            <form className="contact-form">
+              <input
+                type="email"
+                placeholder="Email"
+                className="contact-input"
+                required
+              />
+              <button type="submit" className="contact-button">
+                Submit
+              </button>
+            </form>
+          </div>
           <div className="d">
             <div className="lead"></div>
             <div className="mode"></div>

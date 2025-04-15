@@ -5,27 +5,6 @@
   font-weight: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  min-height: 100vh;
-  /* background-color: rgb(210, 73, 73); */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 700 700' width='700' height='700'%3E%3Cdefs%3E%3Cfilter id='nnnoise-filter' x='-20%25' y='-20%25' width='140%25' height='140%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.102' numOctaves='4' seed='15' stitchTiles='stitch' x='0%25' y='0%25' width='100%25' height='100%25' result='turbulence'%3E%3C/feTurbulence%3E%3CfeSpecularLighting surfaceScale='15' specularConstant='0.75' specularExponent='20' lighting-color='%23b4b0bb' x='0%25' y='0%25' width='100%25' height='100%25' in='turbulence' result='specularLighting'%3E%3CfeDistantLight azimuth='3' elevation='100'%3E%3C/feDistantLight%3E%3C/feSpecularLighting%3E%3C/filter%3E%3C/defs%3E%3Crect width='700' height='700' fill='transparent'%3E%3C/rect%3E%3Crect width='700' height='700' fill='%23b4b0bb' filter='url(%23nnnoise-filter)'%3E%3C/rect%3E%3C/svg%3E");
-  color: black;
-  font-family: Arial, sans-serif;
-  /* overflow: hidden; */
-  overflow-x: hidden;
-  /* Prevent horizontal scroll */
-  overflow-y: auto;
-  /* Allow vertical scroll */
-}
-
 .container {
 
   justify-content: center;
@@ -46,13 +25,15 @@ body {
 .nirvana {
   grid-area: nirvana;
   border: 1px solid white;
+  background-image: url("https://i.pinimg.com/736x/b6/8d/de/b68ddef2e1d28c8dc945050efaec8adc.jpg");
+  background-size: cover;
 
 }
 
 .Inservice {
   grid-area: Inservice;
   border: 1px solid white;
-  background-image: url("https://blocks.shawnlukas.com/assets/shawn-lukas-zyphr-tuner-apple-watch.png");
+  background-image: url("https://i.pinimg.com/736x/bc/95/f8/bc95f892eb0a8c89980418737c193573.jpg");
   background-size: cover;
 }
 
@@ -73,7 +54,25 @@ body {
 .skills {
   grid-area: skills;
   border: 1px solid white;
+  background-color: #241c1a;
+  padding: 20px;
+  color: #F8B430;
+  font-size: 2rem;
+}
 
+.skillsList {
+  padding-top: 80px;
+  margin-left: 30px;
+  display: grid;
+  grid-template-columns: 3.8fr 2.8fr; /* Two columns */
+  gap: 10px; /* Space between items */
+  
+}
+
+.skillsList li {
+    font-size: 1.2rem;
+  text-align: left;
+  
 }
 
 .flip-clock {
@@ -99,18 +98,19 @@ body {
 
 .dino {
   grid-area: dino;
-  border: 1px solid white;
   background-color: rgb(12, 12, 12);
   border: 10px solid black;
+
 }
 
 .dino p {
   position: relative;
   font-family: 'PixelFont';
-  color: #535353;
+  color: #c9c6c6;
   font-size: small;
   padding-left: 2px;
-  animation: blink 3s infinite;
+  animation: blink 2.3s infinite;
+
   /* Blinking animation */
 }
 
@@ -130,7 +130,7 @@ body {
 
 .genposium {
   grid-area: genposium;
-  background-image: url("https://blocks.shawnlukas.com/assets/shawn-lukas-lukas-sans-lowercase-g.png");
+  background-image: url('images/genposium.jpeg');
   background-size: contain;
   border: 1px solid white;
 
@@ -140,8 +140,60 @@ body {
 .Email {
   grid-area: Email;
   border: 1px solid white;
-
+  background-color: #1c182c;
+  font-family: 'Times New Roman', Times, serif;
 }
+.contact-title {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-top: 8px;
+  margin-left: 8px;
+  color: #ffffff;
+}
+
+.contact-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 60px;
+  margin-left: 8px;
+}
+
+.contact-form {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.contact-input {
+  width: 290px; /* Adjust width as needed */
+  padding: 10px;
+  border: 1px solid #241e50;
+  /* border-radius: 6px; */
+
+  background-color: #331818;
+  color: white;
+}
+
+.contact-input::placeholder {
+  color: #888;
+}
+
+
+.contact-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #333;
+}
+
 
 .d {
   display: grid;
@@ -159,8 +211,9 @@ body {
 
 .lead {
   grid-area: lead;
-  background-image: url("https://blocks.shawnlukas.com/assets/shawn-lukas-habits-app-insights-by-week.png");
+  background-image: url("https://i.pinimg.com/736x/7b/cb/6c/7bcb6cb5cba9c5a9cf518f8e9c6af06d.jpg");
   background-size: cover;
+  background-position: top;
   border: 1px solid white;
 
 
@@ -191,9 +244,9 @@ body {
 
 .profile {
   grid-area: profile;
-  background-image: url("https://i.pinimg.com/736x/24/de/1d/24de1db8bbdb6e104dcae759b3554e17.jpg");
-  background-size: contain;
-  background-position: top;
+  background-image: url("https://i.pinimg.com/736x/57/a4/d9/57a4d93ff5bf674904bc259ee89f6675.jpg");
+  background-size: cover;
+  background-position: center;
   border: 1px solid white;
 
 }
@@ -201,31 +254,11 @@ body {
 .social {
   grid-area: social;
   border: 1px solid white;
-
+  background-image: url("https://blocks.shawnlukas.com/assets/shawn-lukas-lukas-sans-typeface-official.png");
+  background-size: cover;
+  background-position: center;
 }
 
-html,
-body,
-.container {
-  height: 100%;
-  margin: 0;
-}
 
-/* For presentation only, no need to copy the code below */
 
-.container {
-  /* border: 1px solid white; */
-  position: relative;
-}
 
-/* .container *:after {
-  content: attr(class);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-} */
