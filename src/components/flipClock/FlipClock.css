@@ -1,0 +1,88 @@
+:root {
+    /* --active-color: #efba1e; */
+	--active-color: #ae4646;
+}
+
+.clock {
+    font-size: 0.0625vw; /* Reduced font size */
+    background-color: #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 21.2rem; /* Reduced width */
+	padding-top: 5px;
+	padding-left: 8px;
+	height: 6.5rem;
+
+}
+
+.digit {
+    width: 2.5rem; /* Increased width by 1/4 */
+    position: relative;
+    height: 5rem; /* Increased height by 1/4 */
+    margin: 5px; /* Adjusted margin */
+}
+.hours,
+.minutes,
+.seconds {
+    position: relative;
+    display: flex;
+}
+
+.segment {
+    width: 1.875rem; /* Increased width by 1/4 */
+    height: 0.46875rem; /* Increased height by 1/4 */
+    background-color: var(--active-color);
+    opacity: 0.08;
+    position: absolute;
+    border-radius: 1.5625rem; /* Increased border radius by 1/4 */
+    transition: opacity 400ms;
+}
+
+.colons {
+    display: flex;
+    justify-content: space-around;
+    height: 2.5rem; /* Increased height by 1/4 */
+    flex-direction: column;
+    transform: translateX(-0.46875rem); /* Adjusted translation */
+}
+
+.colon {
+    width: 0.625rem; /* Increased width by 1/4 */
+    height: 0.625rem; /* Increased height by 1/4 */
+    background-color: var(--active-color);
+    border-radius: 50%;
+}
+
+.segment-2 {
+    transform-origin: top left;
+    transform: rotate(90deg) translate(0.3125rem, -0.015625rem); /* Adjusted translation */
+}
+
+.segment-3 {
+    transform-origin: top right;
+    transform: rotate(-90deg) translate(-0.3125rem, -0.15625rem); /* Adjusted translation */
+}
+
+.segment-4 {
+    transform: translateY(1.875rem); /* Increased translation by 1/4 */
+}
+
+.segment-5 {
+    transform-origin: top left;
+    transform: rotate(90deg) translate(2.1875rem, -0.15625rem); /* Adjusted translation */
+}
+
+.segment-6 {
+    transform-origin: top right;
+    transform: rotate(-90deg) translate(-2.1875rem, -0.15625rem); /* Adjusted translation */
+}
+
+.segment-7 {
+    transform: translateY(3.75rem); /* Increased translation by 1/4 */
+}
+
+.active {
+    opacity: 1;
+}
