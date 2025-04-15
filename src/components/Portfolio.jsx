@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Portfolio.css";
-import FlipClock from "./FlipClock/FlipClock";
+import FlipClock from "./flipClock/FlipClock";
 import ChromeDinoGame from "react-chrome-dino";
 import { Fade } from "react-awesome-reveal";
 
