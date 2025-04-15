@@ -130,7 +130,7 @@
 
 .genposium {
   grid-area: genposium;
-  background-image: url(images/genposium.jpeg); /* fixed relative address */
+  background-image: url('/images/genposium.jpeg'); /* fixed relative address */
   background-size: contain;
   border: 1px solid white;
 
