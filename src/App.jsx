@@ -1,8 +1,7 @@
 import React from 'react'
-import Portfolio from './components/PortFolio'
+import Portfolio from './components/Portfolio'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
-import ChromeDinoGame from 'react-chrome-dino';
 import './App.css'
 const App = () => {
   return (
