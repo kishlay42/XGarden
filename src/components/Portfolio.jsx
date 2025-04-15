@@ -57,13 +57,15 @@ const Portfolio = () => {
         <div className="c">
           <div className="dino">
             <p>PRESS SPACEBAR</p>
-            <ChromeDinoGame sound={false} />
+            <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
+              <ChromeDinoGame sound={false} />
+            </div>{" "}
           </div>
           <div className="genposium"></div>
           <div className="Email">
             <h2 className="contact-title">Contact me</h2>
             <p className="contact-description">
-            Got something to share? <br/> Pop in your email!
+              Got something to share? <br /> Pop in your email!
             </p>
             <form className="contact-form">
               <input
