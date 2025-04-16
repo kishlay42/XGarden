@@ -90,7 +90,11 @@ const Portfolio = () => {
             <p className="contact-description">
               Got something to share? <br /> Pop in your email!
             </p>
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={(e) => {
+              e.preventDefault(); // Prevent the default form submission behavior
+              alert("Thank you, I will contact you soon.");
+              e.target.reset(); // Reset the form fields after submission
+            }}>
               <input
                 type="email"
                 placeholder="Email"

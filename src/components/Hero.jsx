@@ -4,11 +4,11 @@ import Background from "./background/Background";
 const Hero = () => {
   return (
     <>
-    <Background/>
+      <Background />
       <div className="hero">
         <div className="upHead">
-          <div className="shiny-dot"></div>
-          <p className="upText"> AVAILABLE FOR FREELANCE</p>
+
+          <p className="upText"> <div className="shiny-dot"></div>AVAILABLE FOR FREELANCE</p>
         </div>
         <p className="bigHead">
           KISHLAY

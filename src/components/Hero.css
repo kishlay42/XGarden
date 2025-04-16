@@ -1,45 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @font-face {
-    font-family:Starjedi ;
+    font-family: Starjedi;
     src: url('../assets/fonts/starjedi/Starjedi.ttf') format('truetype');
     font-weight: normal;
 }
 
-
-.hero{
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 87vh;
     text-align: center;
+}
+
+.upHead {
+
+    margin-bottom: 40px;
+    animation: slideUpFadeIn 1.5s ease-out; /* Apply the animation */
     
 }
 
-.upHead{
+.upText {
     display: flex;
     flex-direction: row;
-    margin-bottom: 40px;
-    animation: slideUpFadeIn 1.5s ease-out; /* Apply the animation */
-
-}
-.upText{
+    gap: 10px;
     font-size: 1.6rem;
     font-family: "Roboto Mono", monospace;
     color: rgb(143, 139, 139);
+    align-items: center;
 }
+
 .shiny-dot {
     position: relative;
-    top: 10px;
-    right: 12px;
     width: 12px;
     height: 12px;
     background: rgb(197, 10, 10); /* Solid white center */
     border-radius: 50%;
     z-index: 2; /* Ensure it's on top */
-   
 }
-
 
 .shiny-dot::before {
     content: '';
@@ -48,7 +47,7 @@
     left: 50%;
     width: 16px; /* Background circle size */
     height: 16px;
-    background: rgba(136, 11, 11, 0.5); /* Glowing background */
+    background: rgba(246, 145, 145, 0.5); /* Glowing background */
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(1); /* Center and scale */
     z-index: 1; /* Behind the main dot */
@@ -92,5 +91,58 @@
     font-family: 'Inter Tight', sans-serif;
     font-weight: 800;
     animation: slideUpFadeIn 1.5s ease-out; /* Apply the animation */
+}
 
+/* Responsive styles for medium screens (tablets) */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 20px;
+    }
+
+    .upText {
+        font-size: 1.4rem;
+    }
+
+    .bigHead {
+        font-size: 5rem;
+    }
+
+    .upHead {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive styles for small screens (mobile) */
+@media (max-width: 480px) {
+    .hero {
+        height: auto;
+        padding: 10px;
+    }
+
+    .upText {
+        font-size: 1.2rem;
+    }
+
+    .bigHead {
+        font-size: 3rem;
+    }
+
+    .upHead {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .shiny-dot {
+        width: 8px;
+        height: 8px;
+        top: 5px;
+        right: 6px;
+    }
+
+    .shiny-dot::before {
+        width: 12px;
+        height: 12px;
+    }
 }
