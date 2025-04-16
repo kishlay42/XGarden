@@ -4,9 +4,22 @@
   src: url("../assets/fonts/Pixeled.ttf") format("truetype");
   font-weight: normal;
 }
+@keyframes slideUpFadeIn {
+  0% {
+      transform: translateY(50px); /* Start below the original position */
+      opacity: 0; /* Fully transparent */
+  }
+  50% {
+      opacity: 0.4; /* Partially visible */
+  }
+  100% {
+      transform: translateY(0); /* Original position */
+      opacity: 1; /* Fully visible */
+  }
+}
 
 .container {
-
+  animation: slideUpFadeIn 2s ease-out; /* Apply the animation */
   justify-content: center;
   display: grid;
   grid-template-columns: 342px 332.32px 635.28px;
@@ -21,6 +34,11 @@
     "Inservice nirvana c"
     "e f c";
 }
+.nirvana:hover img {
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
+
 
 .nirvana {
   grid-area: nirvana;
@@ -35,7 +53,10 @@
   height: 100%;
   width: 100%;
 }
-.nirvana:hover .top-left{
+.nirvana:hover .top-left {
+  display: block;
+}
+.nirvana:hover .top-left-para {
   display: block;
 }
 
@@ -51,16 +72,34 @@
   height: 100%;
   width: 100%;
 }
+.Inservice:hover img {
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
 
 .top-left {
   position: absolute;
   top: 8px;
   left: 16px;
   display: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: 'Times New Roman', Times, serif;
 }
+.top-left-para {
+  display: none;
+  position: absolute;
+  top:65px;
+  left: 20px;
+  color: #dcd7d7;
+  font-size: 1rem;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  padding-right: 5%;
+}
 .Inservice:hover .top-left{
+  display: block;
+}
+.Inservice:hover .top-left-para {
   display: block;
 }
 .e {
@@ -172,6 +211,13 @@
 .genposium:hover .top-left{
   display: block;
 }
+.genposium:hover img {
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
+.genposium:hover .top-left-para {
+  display: block;
+}
 .Email {
   grid-area: Email;
   border: 1px solid white;
@@ -261,13 +307,13 @@
 .lead:hover .top-left{
   display: block;
 }
-
-img:hover{
+.lead:hover img {
   opacity: 0.1;
-  transition:opacity 0.3s ease;
-
+  transition: opacity 0.3s ease;
 }
-
+.lead:hover .top-left-para {
+  display: block;
+}
 .mode {
   grid-area: mode;
   background-image: url("https://blocks.shawnlukas.com/assets/shawn-lukas-lukas-sans-typeface-dark-or-light.png");
@@ -293,6 +339,9 @@ img:hover{
 
 .profile {
   grid-area: profile;
+  position: relative;
+  text-align: center;
+  color: white;
   border: 1px solid white;
   background-color: black;
   height: 310px;
@@ -302,19 +351,72 @@ img:hover{
   height: 100%;
   width: 100%;
 }
+.profile:hover img {
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
+.top-profile {
+  color: #F8B430;
+  position: absolute;
+  top: 25px;
+  left: 16px;
+  padding-right: 5%;
+  display: none;
+  text-align: left;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+.profile:hover .top-profile {
+  display: block;
+}
 
 .social {
   grid-area: social;
   border: 1px solid white;
   height: 90px;
   background-color: black;
+  position: relative;
+  text-align: center;
  
 }
 .social img {
   height: 100%;
   width: 100%;
 }
+.social:hover img {
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
+.social-links {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between links */
+  padding: 0;
+  margin: 0;
+}
+.social:hover .social-links li {
+  display: inline;
+}
 
+.social-links li {
+  
+  display: none;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #F8B430; /* Highlight color on hover */
+}
 
 
 

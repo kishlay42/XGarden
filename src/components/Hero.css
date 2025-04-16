@@ -13,14 +13,15 @@
     align-items: center;
     height: 80vh;
     text-align: center;
-    /* background-color: rgba(7, 7, 7, 1); */
-    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 700 700' width='700' height='700'%3E%3Cdefs%3E%3Cfilter id='nnnoise-filter' x='-20%25' y='-20%25' width='140%25' height='140%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.102' numOctaves='4' seed='15' stitchTiles='stitch' x='0%25' y='0%25' width='100%25' height='100%25' result='turbulence'%3E%3C/feTurbulence%3E%3CfeSpecularLighting surfaceScale='15' specularConstant='0.75' specularExponent='20' lighting-color='%23b4b0bb' x='0%25' y='0%25' width='100%25' height='100%25' in='turbulence' result='specularLighting'%3E%3CfeDistantLight azimuth='3' elevation='100'%3E%3C/feDistantLight%3E%3C/feSpecularLighting%3E%3C/filter%3E%3C/defs%3E%3Crect width='700' height='700' fill='transparent'%3E%3C/rect%3E%3Crect width='700' height='700' fill='%23b4b0bb' filter='url(%23nnnoise-filter)'%3E%3C/rect%3E%3C/svg%3E"); */
+    
 }
 
 .upHead{
     display: flex;
     flex-direction: row;
     margin-bottom: 40px;
+    animation: slideUpFadeIn 1.5s ease-out; /* Apply the animation */
+
 }
 .upText{
     font-size: 1.6rem;
@@ -33,10 +34,9 @@
     right: 12px;
     width: 12px;
     height: 12px;
-    background: rgba(255, 255, 255, 1); /* Solid white center */
+    background: rgb(197, 10, 10); /* Solid white center */
     border-radius: 50%;
     z-index: 2; /* Ensure it's on top */
-    /* font-family: 'Starjedi', sans-serif; */
    
 }
 
@@ -48,7 +48,7 @@
     left: 50%;
     width: 16px; /* Background circle size */
     height: 16px;
-    background: rgba(227, 227, 227, 0.5); /* Glowing background */
+    background: rgba(136, 11, 11, 0.5); /* Glowing background */
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(1); /* Center and scale */
     z-index: 1; /* Behind the main dot */
@@ -70,12 +70,27 @@
     }
 }
 
-.bigHead{
+@keyframes slideUpFadeIn {
+    0% {
+        transform: translateY(50px); /* Start below the original position */
+        opacity: 0; /* Fully transparent */
+    }
+    50% {
+        opacity: 0.4; /* Partially visible */
+    }
+    100% {
+        transform: translateY(0); /* Original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.bigHead {
     font-size: 8rem;
     margin-bottom: 0px;
     line-height: 0.8;
     color: white;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 800;
-   
+    animation: slideUpFadeIn 1.5s ease-out; /* Apply the animation */
+
 }
