@@ -34,8 +34,21 @@ const Portfolio = () => {
   return (
     <Fade duration={2000} triggerOnce>
       <div className="container">
-        <div className="nirvana"></div>
-        <div className="Inservice"></div>
+        <div className="nirvana">
+          <img
+            src="https://i.pinimg.com/736x/b6/8d/de/b68ddef2e1d28c8dc945050efaec8adc.jpg"
+            alt="nirvana"
+          />
+          <div class="top-left">Nirvana</div>
+        </div>
+        <div className="Inservice">
+          {" "}
+          <img
+            src="https://i.pinimg.com/736x/bc/95/f8/bc95f892eb0a8c89980418737c193573.jpg"
+            alt="inservice"
+          />
+          <div class="top-left">InService</div>
+        </div>
         <div className="e">
           <div className="skills">
             <p>Skills</p>
@@ -61,7 +74,10 @@ const Portfolio = () => {
               <ChromeDinoGame sound={false} />
             </div>{" "}
           </div>
-          <div className="genposium"></div>
+          <div className="genposium">
+            <img src="/images/genposium.jpeg" alt="genposium" />
+            <div class="top-left">Genposium</div>
+          </div>
           <div className="Email">
             <h2 className="contact-title">Contact me</h2>
             <p className="contact-description">
@@ -80,13 +96,29 @@ const Portfolio = () => {
             </form>
           </div>
           <div className="d">
-            <div className="lead"></div>
+            <div className="lead">
+              <img
+                src="https://i.pinimg.com/736x/7b/cb/6c/7bcb6cb5cba9c5a9cf518f8e9c6af06d.jpg"
+                alt="lead_img"
+              />
+              <div className="top-left">Lead</div>
+            </div>
             <div className="mode"></div>
           </div>
         </div>
         <div className="f">
-          <div className="profile"></div>
-          <div className="social"></div>
+          <div className="profile">
+            <img
+              src="https://i.pinimg.com/736x/57/a4/d9/57a4d93ff5bf674904bc259ee89f6675.jpg"
+              alt="profile"
+            />
+          </div>
+          <div className="social">
+            <img
+              src="https://blocks.shawnlukas.com/assets/shawn-lukas-lukas-sans-typeface-official.png"
+              alt="social"
+            />
+          </div>
         </div>
       </div>
     </Fade>

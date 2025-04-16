@@ -25,18 +25,44 @@
 .nirvana {
   grid-area: nirvana;
   border: 1px solid white;
-  background-image: url("https://i.pinimg.com/736x/b6/8d/de/b68ddef2e1d28c8dc945050efaec8adc.jpg");
-  background-size: cover;
+  background-color: black;
+  position: relative;
+  text-align: center;
+  color: white;
 
+}
+.nirvana img{
+  height: 100%;
+  width: 100%;
+}
+.nirvana:hover .top-left{
+  display: block;
 }
 
 .Inservice {
   grid-area: Inservice;
   border: 1px solid white;
-  background-image: url("https://i.pinimg.com/736x/bc/95/f8/bc95f892eb0a8c89980418737c193573.jpg");
-  background-size: cover;
+  background-color: black;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.Inservice img{
+  height: 100%;
+  width: 100%;
 }
 
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  display: none;
+  font-size: 1.8rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+.Inservice:hover .top-left{
+  display: block;
+}
 .e {
   display: grid;
   grid-template-columns: 1fr;
@@ -130,13 +156,22 @@
 
 .genposium {
   grid-area: genposium;
-  background-image: url('/images/genposium.jpeg'); /* fixed relative address */
   background-size: contain;
   border: 1px solid white;
-
-
+  background-color: black;
+  height: 250px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.genposium img{
+  height: 100%;
+  width: 100%;
 }
 
+.genposium:hover .top-left{
+  display: block;
+}
 .Email {
   grid-area: Email;
   border: 1px solid white;
@@ -198,7 +233,7 @@
 .d {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.8fr 1.2fr;
+  grid-template-rows: 1fr 1fr;
   gap: 20px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -211,11 +246,25 @@
 
 .lead {
   grid-area: lead;
-  background-image: url("https://i.pinimg.com/736x/7b/cb/6c/7bcb6cb5cba9c5a9cf518f8e9c6af06d.jpg");
-  background-size: cover;
-  background-position: top;
   border: 1px solid white;
+  background-color: black;
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
+.lead img{
+  height: 100%;
+  width: 100%;
+}
+
+.lead:hover .top-left{
+  display: block;
+}
+
+img:hover{
+  opacity: 0.1;
+  transition:opacity 0.3s ease;
 
 }
 
@@ -244,20 +293,28 @@
 
 .profile {
   grid-area: profile;
-  background-image: url("https://i.pinimg.com/736x/57/a4/d9/57a4d93ff5bf674904bc259ee89f6675.jpg");
-  background-size: cover;
-  background-position: center;
   border: 1px solid white;
+  background-color: black;
+  height: 310px;
 
+}
+.profile img {
+  height: 100%;
+  width: 100%;
 }
 
 .social {
   grid-area: social;
   border: 1px solid white;
-  background-image: url("https://blocks.shawnlukas.com/assets/shawn-lukas-lukas-sans-typeface-official.png");
-  background-size: cover;
-  background-position: center;
+  height: 90px;
+  background-color: black;
+ 
 }
+.social img {
+  height: 100%;
+  width: 100%;
+}
+
 
 
 
