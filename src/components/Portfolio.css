@@ -4,22 +4,31 @@
   src: url("../assets/fonts/Pixeled.ttf") format("truetype");
   font-weight: normal;
 }
+
 @keyframes slideUpFadeIn {
   0% {
-      transform: translateY(50px); /* Start below the original position */
-      opacity: 0; /* Fully transparent */
+    transform: translateY(50px);
+    /* Start below the original position */
+    opacity: 0;
+    /* Fully transparent */
   }
+
   50% {
-      opacity: 0.4; /* Partially visible */
+    opacity: 0.4;
+    /* Partially visible */
   }
+
   100% {
-      transform: translateY(0); /* Original position */
-      opacity: 1; /* Fully visible */
+    transform: translateY(0);
+    /* Original position */
+    opacity: 1;
+    /* Fully visible */
   }
 }
 
 .container {
-  animation: slideUpFadeIn 2s ease-out; /* Apply the animation */
+  animation: slideUpFadeIn 2s ease-out;
+  /* Apply the animation */
   justify-content: center;
   display: grid;
   grid-template-columns: 342px 332.32px 635.28px;
@@ -35,151 +44,9 @@
     "e f c";
 }
 
-/* Responsive styles for tablets (small laptops and medium screens) */
-@media (max-width: 1024px) {
-  .container {
-    grid-template-columns: 1fr 1fr; /* Two-column layout */
-    grid-template-rows: auto; /* Adjust rows automatically */
-    grid-template-areas:
-      "Inservice nirvana"
-      "c e"
-      "f f";
-    gap: 15px; /* Reduce gap for tablets */
-    padding: 15px; /* Add padding around the container */
-  }
 
-  .skillsList {
-    grid-template-columns: 1fr; /* Stack skills in a single column */
-    gap: 10px; /* Adjust gap between items */
-  }
 
-  .contact-input {
-    width: 100%; /* Full width for input fields */
-  }
-
-  .contact-form {
-    flex-direction: column; /* Stack input and button vertically */
-    gap: 15px; /* Add spacing between input and button */
-  }
-
-  .social-links {
-    flex-direction: column; /* Stack social links vertically */
-    gap: 15px; /* Add spacing between links */
-  }
-
-  .nirvana,
-  .Inservice,
-  .genposium,
-  .Email,
-  .lead,
-  .profile,
-  .social {
-    margin-top: 15px; /* Add margin-top for spacing between sections */
-    padding: 15px; /* Add padding inside each grid item */
-    font-size: 1rem; /* Adjust font size for tablets */
-  }
-
-  .skills {
-    font-size: 1.8rem; /* Adjust font size for skills section */
-    padding: 20px; /* Add padding for better spacing */
-  }
-
-  .contact-title {
-    font-size: 1.8rem; /* Adjust font size for contact title */
-  }
-
-  .contact-description {
-    font-size: 1rem; /* Adjust font size for contact description */
-  }
-
-  .top-left,
-  .top-left-para,
-  .top-profile {
-    font-size: 1rem; /* Adjust font size for text overlays */
-  }
-
-  .social-links a {
-    font-size: 1.2rem; /* Adjust font size for social links */
-  }
-
-  .dino p {
-    font-size: 1rem; /* Adjust font size for dino text */
-  }
-}
-
-/* Responsive styles for small screens (mobile) */
-@media (max-width: 480px) {
-  .container {
-    grid-template-columns: 1fr; /* Single column layout */
-    grid-template-rows: auto; /* Adjust rows automatically */
-    grid-template-areas:
-      "Inservice"
-      "nirvana"
-      "c"
-      "e"
-      "f";
-    gap: 10px; /* Reduce gap for smaller screens */
-    padding: 10px; /* Add padding around the container */
-  }
-
-  .skillsList {
-    grid-template-columns: 1fr; /* Stack skills in a single column */
-    gap: 5px; /* Reduce gap between items */
-  }
-
-  .contact-input {
-    width: 100%; /* Full width for input fields */
-  }
-
-  .contact-form {
-    flex-direction: column; /* Stack input and button vertically */
-    gap: 10px; /* Add spacing between input and button */
-  }
-
-  .social-links {
-    flex-direction: column; /* Stack social links vertically */
-    gap: 10px; /* Add spacing between links */
-  }
-
-  .nirvana,
-  .Inservice,
-  .genposium,
-  .Email,
-  .lead,
-  .profile,
-  .social {
-    margin-top: 10px; /* Add margin-top for spacing between sections */
-    padding: 10px; /* Add padding inside each grid item */
-    font-size: 0.9rem; /* Decrease font size for smaller screens */
-  }
-
-  .skills {
-    font-size: 1.5rem; /* Reduce font size for skills section */
-    padding: 15px; /* Add padding for better spacing */
-  }
-
-  .contact-title {
-    font-size: 1.5rem; /* Reduce font size for contact title */
-  }
-
-  .contact-description {
-    font-size: 0.9rem; /* Reduce font size for contact description */
-  }
-
-  .top-left,
-  .top-left-para,
-  .top-profile {
-    font-size: 0.8rem; /* Reduce font size for text overlays */
-  }
-
-  .social-links a {
-    font-size: 1rem; /* Reduce font size for social links */
-  }
-
-  .dino p {
-    font-size: 0.8rem; /* Reduce font size for dino text */
-  }
-}
+/* General styles for all screens */
 .nirvana:hover img {
   opacity: 0.1;
   transition: opacity 0.3s ease;
@@ -195,13 +62,16 @@
   color: white;
 
 }
-.nirvana img{
+
+.nirvana img {
   height: 100%;
   width: 100%;
 }
+
 .nirvana:hover .top-left {
   display: block;
 }
+
 .nirvana:hover .top-left-para {
   display: block;
 }
@@ -214,10 +84,12 @@
   text-align: center;
   color: white;
 }
-.Inservice img{
+
+.Inservice img {
   height: 100%;
   width: 100%;
 }
+
 .Inservice:hover img {
   opacity: 0.1;
   transition: opacity 0.3s ease;
@@ -231,10 +103,11 @@
   font-size: 2rem;
   font-family: 'Times New Roman', Times, serif;
 }
+
 .top-left-para {
   display: none;
   position: absolute;
-  top:65px;
+  top: 65px;
   left: 20px;
   color: #dcd7d7;
   font-size: 1rem;
@@ -242,12 +115,15 @@
   font-family: 'Times New Roman', Times, serif;
   padding-right: 5%;
 }
-.Inservice:hover .top-left{
+
+.Inservice:hover .top-left {
   display: block;
 }
+
 .Inservice:hover .top-left-para {
   display: block;
 }
+
 .e {
   display: grid;
   grid-template-columns: 1fr;
@@ -275,15 +151,17 @@
   padding-top: 80px;
   margin-left: 30px;
   display: grid;
-  grid-template-columns: 3.8fr 2.8fr; /* Two columns */
-  gap: 10px; /* Space between items */
-  
+  grid-template-columns: 3.8fr 2.8fr;
+  /* Two columns */
+  gap: 10px;
+  /* Space between items */
+
 }
 
 .skillsList li {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
   text-align: left;
-  
+
 }
 
 .flip-clock {
@@ -349,27 +227,32 @@
   text-align: center;
   color: white;
 }
-.genposium img{
+
+.genposium img {
   height: 100%;
   width: 100%;
 }
 
-.genposium:hover .top-left{
+.genposium:hover .top-left {
   display: block;
 }
+
 .genposium:hover img {
   opacity: 0.1;
   transition: opacity 0.3s ease;
 }
+
 .genposium:hover .top-left-para {
   display: block;
 }
+
 .Email {
   grid-area: Email;
   border: 1px solid white;
   background-color: #1c182c;
   font-family: 'Times New Roman', Times, serif;
 }
+
 .contact-title {
   font-size: 2rem;
   font-weight: 200;
@@ -410,21 +293,24 @@
   color: white;
 }
 
-.lead img{
+.lead img {
   height: 100%;
   width: 100%;
 }
 
-.lead:hover .top-left{
+.lead:hover .top-left {
   display: block;
 }
+
 .lead:hover img {
   opacity: 0.1;
   transition: opacity 0.3s ease;
 }
+
 .lead:hover .top-left-para {
   display: block;
 }
+
 .mode {
   grid-area: mode;
   background-image: url("https://blocks.shawnlukas.com/assets/shawn-lukas-lukas-sans-typeface-dark-or-light.png");
@@ -458,14 +344,17 @@
   height: 310px;
 
 }
+
 .profile img {
   height: 100%;
   width: 100%;
 }
+
 .profile:hover img {
   opacity: 0.1;
   transition: opacity 0.3s ease;
 }
+
 .top-profile {
   color: white;
   position: absolute;
@@ -477,6 +366,7 @@
   font-size: 1.2rem;
   font-family: 'Times New Roman', Times, serif;
 }
+
 .profile:hover .top-profile {
   display: block;
 }
@@ -488,16 +378,19 @@
   background-color: black;
   position: relative;
   text-align: center;
- 
+
 }
+
 .social img {
   height: 100%;
   width: 100%;
 }
+
 .social:hover img {
   opacity: 0.1;
   transition: opacity 0.3s ease;
 }
+
 .social-links {
   position: absolute;
   top: 50%;
@@ -505,16 +398,18 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px; /* Space between links */
+  gap: 20px;
+  /* Space between links */
   padding: 0;
   margin: 0;
 }
+
 .social:hover .social-links li {
   display: inline;
 }
 
 .social-links li {
-  
+
   display: none;
 }
 
@@ -526,9 +421,187 @@
 }
 
 .social-links a:hover {
-  color: #c38eff; /* Highlight color on hover */
+  color: #c38eff;
+  /* Highlight color on hover */
 }
 
 
+/* Tablet View */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "Inservice"
+      "nirvana"
+      "e"
+      "c"
+      "f";
+    gap: 15px;
+    padding: 10px 20px;
+    /* 10px for top and bottom, 20px for left and right */
+    margin: 70px 10px 10px 10px;
+    /* Top: 70px, Right: 10px, Bottom: 10px, Left: 10px */
+    /* 15px for top and bottom, 30px for left and right */
+  }
+
+  .Inservice,
+  .nirvana {
+    height: 450px;
+  }
+
+  .c {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dino"
+      "genposium"
+      "d"
+      "Email";
+    gap: 15px;
+  }
+
+  .d {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "mode"
+      " lead";
+
+    gap: 15px;
+  }
+
+  .genposium,
+  .profile {
+    height: auto;
+  }
+
+  .mode {
+    height: 100px;
+  }
+
+  .lead {
+    height: 600px;
+  }
+
+  .Email {
+    height: 200px;
+    padding: 0px 10px 10px 10px;
+  }
+
+  .f {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "profile"
+      "social";
+    gap: 15px;
+  }
+
+  .top-left,
+  .top-profile {
+    font-size: 3rem;
+    padding: 10px;
+  }
+
+  .top-left-para {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .contact-title {
+    font-size: 2.3rem;
+  }
+
+  .contact-description {
+    font-size: 1.1rem;
+    padding-left: 10px;
+  }
+
+  .social {
+    height: 100px;
+  }
+
+  .social-links {
+    margin: 0px 50px;
+    gap: 70px;
+  }
+
+  .social-links a {
+    font-size: 1.7rem;
+  }
+
+  .flip-clock {
+    background-color: #0d0d13;
+  }
+
+  .skills {
+    padding: 1opx 20px;
+  }
+
+}
+
+/* Mobile View */
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+    /* Single column layout */
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "Inservice"
+      "nirvana"
+      "e"
+      "c"
+      "f";
+    gap: 10px;
+    /* Reduce gap */
+    width: 100%;
+    /* Ensure full width */
+    /* margin-left: 5%; */
+  }
+
+  .Email {
+    padding: 0px 10px 10px 10px;
+  }
 
 
+  .top-left,
+  .top-profile {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .top-left-para {
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-description {
+    font-size: 0.9rem;
+  }
+
+
+
+  img {
+    max-width: 100%;
+    /* Make images responsive */
+    height: auto;
+  }
+
+  .Email {
+    padding: 0 5%;
+    /* Use percentage-based padding */
+  }
+
+  .social-links {
+    margin: 0 auto;
+    /* Center align */
+    gap: 20px;
+    /* Reduce gap */
+  }
+}

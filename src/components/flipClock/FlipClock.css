@@ -86,3 +86,23 @@
 .active {
     opacity: 1;
 }
+
+@media (max-width: 480px) {
+    .clock {
+        font-size: 0.0425vw; /* Reduced font size */
+        width: 100%; /* Reduced width */
+        height: 6.5rem;
+    }
+    
+}
+@media (max-width: 768px) {
+    .clock {
+        font-size: 0.0625vw; /* Reduced font size */
+        width: 21rem; /* Reduced width */
+        height: 10.5rem;
+        padding: 0px 20px;
+        margin: 0px auto;
+    }
+
+    
+}

@@ -98,6 +98,8 @@
     .hero {
         height: auto;
         padding: 20px;
+        margin: 140px 0px;
+
     }
 
     .upText {
@@ -105,7 +107,7 @@
     }
 
     .bigHead {
-        font-size: 5rem;
+        font-size: 7rem;
     }
 
     .upHead {
@@ -119,14 +121,15 @@
     .hero {
         height: auto;
         padding: 10px;
+        margin-top: 80px;
     }
 
     .upText {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .bigHead {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     .upHead {
@@ -135,10 +138,9 @@
     }
 
     .shiny-dot {
-        width: 8px;
-        height: 8px;
-        top: 5px;
-        right: 6px;
+        width: 6px;
+        height: 6px;
+      
     }
 
     .shiny-dot::before {

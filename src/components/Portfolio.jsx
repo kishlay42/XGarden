@@ -41,7 +41,7 @@ const Portfolio = () => {
             src="https://i.pinimg.com/736x/b6/8d/de/b68ddef2e1d28c8dc945050efaec8adc.jpg"
             alt="nirvana"
           />
-          <div class="top-left">Nirvana</div>
+          <div className="top-left">Nirvana</div>
           <p className="top-left-para">
             A Chrome extension that blends tech and sustainability—recommending
             eco-friendly alternatives to make your online shopping cleaner and
@@ -55,7 +55,7 @@ const Portfolio = () => {
             src="https://i.pinimg.com/736x/bc/95/f8/bc95f892eb0a8c89980418737c193573.jpg"
             alt="inservice"
           />
-          <div class="top-left">InService</div>
+          <div className="top-left">InService</div>
           <p className="top-left-para">
             Bringing small businesses online with desi flair—connecting local
             vendors, boosting supply chains, and empowering communities across
@@ -90,7 +90,7 @@ const Portfolio = () => {
           </div>
           <div className="genposium">
             <img src="/images/genposium.jpeg" alt="genposium" />
-            <div class="top-left">Genposium</div>
+            <div className="top-left">Genposium</div>
             <p className="top-left-para">
               Connecting campuses through groups, contests, and open-source
               magic—fueled by passion, creativity, and code.
