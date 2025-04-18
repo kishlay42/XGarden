@@ -265,9 +265,9 @@
 .skills {
   grid-area: skills;
   border: 1px solid white;
-  background-color: #241c1a;
+  background-color: #00002e;
   padding: 20px;
-  color: #F8B430;
+  color: #c38eff;
   font-size: 2rem;
 }
 
@@ -385,41 +385,6 @@
   margin-left: 8px;
 }
 
-.contact-form {
-  display: flex;
-  gap: 10px;
-  margin-left: 10px;
-}
-
-.contact-input {
-  width: 290px; /* Adjust width as needed */
-  padding: 10px;
-  border: 1px solid #241e50;
-  /* border-radius: 6px; */
-
-  background-color: #331818;
-  color: white;
-}
-
-.contact-input::placeholder {
-  color: #888;
-}
-
-
-.contact-button {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.contact-button:hover {
-  background-color: #333;
-}
 
 
 .d {
@@ -502,7 +467,7 @@
   transition: opacity 0.3s ease;
 }
 .top-profile {
-  color: #F8B430;
+  color: white;
   position: absolute;
   top: 25px;
   left: 16px;
@@ -561,7 +526,7 @@
 }
 
 .social-links a:hover {
-  color: #F8B430; /* Highlight color on hover */
+  color: #c38eff; /* Highlight color on hover */
 }
 
 
