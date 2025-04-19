@@ -427,7 +427,7 @@
 
 
 /* Tablet View */
-@media (min-width: 768px) {
+@media (max-width:800px) {
   .container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto ;
@@ -561,12 +561,13 @@
   .lead {
     height: 500px;
   }
-  .nirvana,.Inservice, .e, .f ,.d,.genposium,.Email{
-    width: 80%;
+  .nirvana,.Inservice, .f,.e ,.d,.genposium,.Email{
+    width: 88%;
     /* Use percentage-based width */
     margin: 0 auto;
   }
   
+
   .c {
     border: none;
     grid-template-columns: 1fr;
@@ -587,7 +588,7 @@
       " lead";
 
     gap: 15px;
-    width: 80%;
+    width: 88%;
   }
 
   .f {
@@ -597,7 +598,7 @@
       "profile"
       "social";
     gap: 15px;
-    width: 80%;
+    width: 88%;
   }
  
 

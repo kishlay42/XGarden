@@ -89,13 +89,13 @@
 
 @media (max-width: 480px) {
     .clock {
-        font-size: 0.0425vw; /* Reduced font size */
         width: 100%; /* Reduced width */
         height: 6.5rem;
     }
     
+    
 }
-@media (max-width: 768px) {
+@media (max-width:800px) {
     .clock {
         font-size: 0.0625vw; /* Reduced font size */
         width: 21rem; /* Reduced width */

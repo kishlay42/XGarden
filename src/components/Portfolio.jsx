@@ -7,7 +7,33 @@ import ArrowButton from "./usables/ArrowButton";
 import GoogleForm from "./usables/GoogleForm";
 import Dark from "./usables/Dark";
 
+
+
+
+
 const Portfolio = () => {
+  useEffect(() => {
+    const originalInsertRule = CSSStyleSheet.prototype.insertRule;
+  
+    CSSStyleSheet.prototype.insertRule = function (rule, index) {
+      try {
+        // Attempt to insert the rule normally
+        return originalInsertRule.call(this, rule, index);
+      } catch (error) {
+        // If it fails, try a different stylesheet index
+        if (document.styleSheets.length > 2) {
+          return document.styleSheets[2].insertRule(rule, index);
+        }
+        throw error; // Re-throw if no fallback works
+      }
+    };
+  
+    return () => {
+      // Restore the original insertRule method when the component unmounts
+      CSSStyleSheet.prototype.insertRule = originalInsertRule;
+    };
+  }, []);
+  
   useEffect(() => {
     const handleVisibilityChange = (inView) => {
       if (inView) {
