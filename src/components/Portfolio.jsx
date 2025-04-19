@@ -5,6 +5,7 @@ import ChromeDinoGame from "react-chrome-dino";
 import { Fade } from "react-awesome-reveal";
 import ArrowButton from "./usables/ArrowButton";
 import GoogleForm from "./usables/GoogleForm";
+import Dark from "./usables/Dark";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -118,7 +119,7 @@ const Portfolio = () => {
               </p>
               <ArrowButton linkSrc="https://github.com/kishlay42/AI_leadScore" />
             </div>
-            <div className="mode"></div>
+            <div className="mode"><Dark/></div>
           </div>
         </div>
         <div className="f">

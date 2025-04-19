@@ -1,10 +1,14 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Custom Font: Starjedi */
 @font-face {
     font-family: Starjedi;
     src: url('../assets/fonts/starjedi/Starjedi.ttf') format('truetype');
     font-weight: normal;
 }
 
+/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -14,13 +18,13 @@
     text-align: center;
 }
 
+/* Upper Heading Section */
 .upHead {
-
     margin-bottom: 40px;
-    animation: slideUpFadeIn 1.5s ease-out; /* Apply the animation */
-    
+    animation: slideUpFadeIn 1.5s ease-out; /* Slide up and fade in animation */
 }
 
+/* Text in the Upper Heading */
 .upText {
     display: flex;
     flex-direction: row;
@@ -31,21 +35,23 @@
     align-items: center;
 }
 
+/* Shiny Dot Styling */
 .shiny-dot {
     position: relative;
     width: 12px;
     height: 12px;
-    background: rgb(197, 10, 10); /* Solid white center */
+    background: rgb(197, 10, 10); /* Solid red center */
     border-radius: 50%;
     z-index: 2; /* Ensure it's on top */
 }
 
+/* Glowing Effect for Shiny Dot */
 .shiny-dot::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 16px; /* Background circle size */
+    width: 16px;
     height: 16px;
     background: rgba(246, 145, 145, 0.5); /* Glowing background */
     border-radius: 50%;
@@ -54,8 +60,9 @@
     animation: grow-shrink 2s infinite ease-in-out; /* Growing and shrinking effect */
 }
 
+/* Animation: Glowing Effect */
 @keyframes grow-shrink {
-    0% {
+    0%, 100% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 0.8;
     }
@@ -63,12 +70,9 @@
         transform: translate(-50%, -50%) scale(1.6); /* Grow larger */
         opacity: 0.5; /* Fade slightly */
     }
-    100% {
-        transform: translate(-50%, -50%) scale(0.7); /* Shrink back to original size */
-        opacity: 0.8; /* Restore opacity */
-    }
 }
 
+/* Animation: Slide Up and Fade In */
 @keyframes slideUpFadeIn {
     0% {
         transform: translateY(50px); /* Start below the original position */
@@ -83,6 +87,7 @@
     }
 }
 
+/* Big Heading Styling */
 .bigHead {
     font-size: 8rem;
     margin-bottom: 0px;
@@ -90,16 +95,15 @@
     color: white;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 800;
-    animation: slideUpFadeIn 1.5s ease-out; /* Apply the animation */
+    animation: slideUpFadeIn 1.5s ease-out; /* Slide up and fade in animation */
 }
 
-/* Responsive styles for medium screens (tablets) */
+/* Responsive Styles for Medium Screens (Tablets) */
 @media (max-width: 768px) {
     .hero {
         height: auto;
         padding: 20px;
         margin: 140px 0px;
-
     }
 
     .upText {
@@ -116,7 +120,7 @@
     }
 }
 
-/* Responsive styles for small screens (mobile) */
+/* Responsive Styles for Small Screens (Mobile) */
 @media (max-width: 480px) {
     .hero {
         height: auto;
@@ -140,7 +144,6 @@
     .shiny-dot {
         width: 6px;
         height: 6px;
-      
     }
 
     .shiny-dot::before {

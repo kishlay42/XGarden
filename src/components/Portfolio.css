@@ -313,9 +313,9 @@
 
 .mode {
   grid-area: mode;
-  background-image: url("https://blocks.shawnlukas.com/assets/shawn-lukas-lukas-sans-typeface-dark-or-light.png");
-  background-size: cover;
-  background-position: center;
+  /* background-image: url("https://blocks.shawnlukas.com/assets/shawn-lukas-lukas-sans-typeface-dark-or-light.png"); */
+  /* background-size: cover; */
+  /* background-position: center; */
   border: 1px solid white;
 
 }
@@ -427,22 +427,17 @@
 
 
 /* Tablet View */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto ;
     grid-template-areas:
-      "Inservice"
-      "nirvana"
-      "e"
-      "c"
-      "f";
+      "Inservice nirvana"
+      "e f"
+      "c c";
     gap: 15px;
     padding: 10px 20px;
     /* 10px for top and bottom, 20px for left and right */
-    margin: 70px 10px 10px 10px;
-    /* Top: 70px, Right: 10px, Bottom: 10px, Left: 10px */
-    /* 15px for top and bottom, 30px for left and right */
   }
 
   .Inservice,
@@ -451,13 +446,12 @@
   }
 
   .c {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-      "dino"
-      "genposium"
-      "d"
-      "Email";
+      "dino dino"
+      "d genposium"
+      "d Email";
     gap: 15px;
   }
 
@@ -481,7 +475,7 @@
   }
 
   .lead {
-    height: 600px;
+    height: 358px;
   }
 
   .Email {
@@ -554,17 +548,58 @@
       "e"
       "c"
       "f";
-    gap: 10px;
+    gap: 20px;
     /* Reduce gap */
     width: 100%;
+    /* Adjust width for mobile */
+    margin: 0 auto;
     /* Ensure full width */
-    /* margin-left: 5%; */
+  }
+  .genposium,.nirvana,.Inservice,.profile {
+    height: 400px;
+  }
+  .lead {
+    height: 500px;
+  }
+  .nirvana,.Inservice, .e, .f ,.d,.genposium,.Email{
+    width: 80%;
+    /* Use percentage-based width */
+    margin: 0 auto;
+  }
+  
+  .c {
+    border: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "dino"
+      "d "
+      "genposium"
+      "Email";
+    gap: 15px;
   }
 
-  .Email {
-    padding: 0px 10px 10px 10px;
+  .d {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "mode"
+      " lead";
+
+    gap: 15px;
+    width: 80%;
   }
 
+  .f {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "profile"
+      "social";
+    gap: 15px;
+    width: 80%;
+  }
+ 
 
   .top-left,
   .top-profile {
@@ -586,7 +621,6 @@
   }
 
 
-
   img {
     max-width: 100%;
     /* Make images responsive */
@@ -594,7 +628,7 @@
   }
 
   .Email {
-    padding: 0 5%;
+    padding: 2% 2%;
     /* Use percentage-based padding */
   }
 

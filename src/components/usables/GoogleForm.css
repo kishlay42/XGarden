@@ -1,22 +1,26 @@
+/* Form Container */
 .contact-form {
     display: flex;
-    gap: 10px;
-    margin-left: 10px;
-  }
-  
-  .contact-input {
-    width: 290px; /* Adjust width as needed */
+    gap: 10px; /* Space between input and button */
+    margin-left: 10px; /* Slight offset from the left */
+}
+
+/* Input Field Styling */
+.contact-input {
+    width: 290px;
     padding: 10px;
     border: 1px solid #241e50;
     background-color: #331818;
     color: white;
-  }
-  
-  .contact-input::placeholder {
-    color: #888;
-  }
-  
-  .contact-button {
+}
+
+/* Placeholder Text Styling */
+.contact-input::placeholder {
+    color: #888; /* Light gray for placeholder text */
+}
+
+/* Submit Button Styling */
+.contact-button {
     background-color: #000;
     color: #fff;
     padding: 10px 16px;
@@ -24,11 +28,11 @@
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s ease;
-  }
-  
-  .contact-button:hover {
-    background-color: #333;
-  }
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
 
- 
+/* Submit Button Hover Effect */
+.contact-button:hover {
+    background-color: #333; /* Darker background on hover */
+    border: 0.3px solid #000; /* Subtle border effect */
+}

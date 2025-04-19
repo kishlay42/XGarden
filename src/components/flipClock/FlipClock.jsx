@@ -1,26 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './FlipClock.css'; // your CSS file, unchanged
-
-const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-const Digit = ({ number }) => {
-  const segments = [1, 2, 3, 4, 5, 6, 7];
-  return (
-    <div className="digit">
-      {segments.map((seg) => {
-        const activeClass = `n${number}`;
-        return (
-          <div
-            key={seg}
-            className={`segment segment-${seg} ${
-              digits.includes(number) ? activeClass : ''
-            } ${shouldSegmentBeActive(seg, number) ? 'active' : ''}`}
-          ></div>
-        );
-      })}
-    </div>
-  );
-};
+import './FlipClock.css';
 
 const segmentMap = {
   0: [1, 2, 3, 5, 6, 7],
@@ -35,8 +14,20 @@ const segmentMap = {
   9: [1, 2, 3, 4, 6, 7],
 };
 
-const shouldSegmentBeActive = (segment, number) => {
-  return segmentMap[number]?.includes(segment);
+const shouldSegmentBeActive = (segment, number) => segmentMap[number]?.includes(segment);
+
+const Digit = ({ number }) => {
+  const segments = [1, 2, 3, 4, 5, 6, 7];
+  return (
+    <div className="digit">
+      {segments.map((seg) => (
+        <div
+          key={seg}
+          className={`segment segment-${seg} ${shouldSegmentBeActive(seg, number) ? 'active' : ''}`}
+        ></div>
+      ))}
+    </div>
+  );
 };
 
 const Colon = () => (

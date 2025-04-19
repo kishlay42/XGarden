@@ -1,29 +1,28 @@
 .arrow-button {
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .arrow-icon {
-    width: 48px;
-    height: 48px;
-    transform: rotate(0deg);
-    transition: transform 0.3s ease;
-  }
-  
-  .arrow-button:hover .arrow-icon {
-    transform: rotate(-35deg); /* ↗️ on hover */
-  }
-  
-  .bottom-right {
-    bottom: 16px;
-    right: 24px;
-  }
-  
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  width: 48px;
+  height: 48px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow-button:hover .arrow-icon {
+  transform: rotate(-35deg);
+}
+
+.bottom-right {
+  bottom: 16px;
+  right: 24px;
+}

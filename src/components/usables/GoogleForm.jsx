@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./GoogleForm.css"; // Import the updated CSS file
+import "./GoogleForm.css";
 
 const GoogleForm = () => {
   const [email, setEmail] = useState("");
@@ -7,27 +7,23 @@ const GoogleForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Create a FormData object to send the data
     const formData = new FormData();
     formData.append("entry.291299536", email);
     formData.append("fvv", "1");
     formData.append("fbzx", "2439902675640837705");
     formData.append("pageHistory", "0");
 
-    // Submit the form data to Google Forms
     fetch(
       "https://docs.google.com/forms/d/e/1FAIpQLScqwSZRYq3jfViemg0gbBQCPUURRAH9CyCatuuPsEinSTY1jw/formResponse",
       {
         method: "POST",
         body: formData,
-        mode: "no-cors", // Prevent CORS issues
+        mode: "no-cors",
       }
     )
       .then(() => {
         alert("Form Submitted. Thanks!");
-        setEmail(""); // Clear the input field after submission
-        // Optionally redirect to a thank-you page
-        // window.location.href = "/thank-you";
+        setEmail("");
       })
       .catch((error) => {
         console.error("Error submitting the form:", error);
@@ -35,9 +31,8 @@ const GoogleForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} id="googleForm" className="contact-form">
+    <form onSubmit={handleSubmit} className="contact-form">
       <input
-        id="291299536"
         type="email"
         name="entry.291299536"
         className="contact-input"
