@@ -8,9 +8,6 @@ import GoogleForm from "./usables/GoogleForm";
 import Dark from "./usables/Dark";
 
 
-
-
-
 const Portfolio = () => {
   useEffect(() => {
     const originalInsertRule = CSSStyleSheet.prototype.insertRule;

@@ -517,12 +517,12 @@
   }
 
   .social-links {
-    margin: 0px 50px;
-    gap: 70px;
+    margin: 0px auto;
+    gap: 25px;
   }
 
   .social-links a {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 
   .flip-clock {
@@ -634,9 +634,11 @@
   }
 
   .social-links {
-    margin: 0 auto;
-    /* Center align */
-    gap: 20px;
-    /* Reduce gap */
+    margin: 0px auto;
+        gap: 25px;
+  }
+
+  .social-links a {
+    font-size: 1.4rem;
   }
 }
